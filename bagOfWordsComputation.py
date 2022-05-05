@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 from sklearn.cluster import KMeans
 from scipy.spatial.distance import cdist
 import pickle
-import os
+
 #Author: Desmond Blake
 
 #About This file is used to compute the bag of words dictionary used for image classification using an unisupervised methood called kMeans 
