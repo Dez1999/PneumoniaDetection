@@ -3,7 +3,6 @@
 import cv2
 import streamlit as st
 import pandas as pd
-from io import StringIO
 from PIL import Image
 import pickle
 import numpy as np 
@@ -39,11 +38,11 @@ def initializeGUI():
         # Convert image into numpy array
         image = cv2.imread(img, 0)
 
-        print(type(image))
-        print(image.shape)
+        # print(type(image))
+        # print(image.shape)
 
         # Resize Image for model
-        print("2 - Resize Image")
+        # print("2 - Resize Image")
         Image_resized = cv2.resize(image, (200, 200))
         displayImagesList.append(Image_resized)
 
@@ -81,20 +80,20 @@ def processImage(image):
 
     # Convert image into numpy array
     Image_array = np.array(Image.open(BytesIO(bytes_data)))
-    print("1 - Image Array ")
-    print(Image_array)
+    # print("1 - Image Array ")
+    # print(Image_array)
     #st.write(Image_array)
 
-    print(type(Image_array))
-    print(Image_array.shape)
+    # print(type(Image_array))
+    # print(Image_array.shape)
 
     # Resize Image for model
-    print("2 - Resize Image")
+    # print("2 - Resize Image")
     Image_resized = cv2.resize(Image_array, (100, 100))
-    print(Image_resized)
+    # print(Image_resized)
 
     # Convert image from BGR to RGB
-    print("3 - Convert to RGB")
+    # print("3 - Convert to RGB")
     Image_RGB = cv2.cvtColor(Image_resized, cv2.COLOR_BGR2RGB)
 
     # st.image(Image_RGB)
@@ -120,8 +119,8 @@ def getImageFeatures(imageData):
     #Obtain relevant image Features for Model
     clusterSize = 60
     imageFeatures = getBOWFeatures(BOW_dictionary, clusterSize, data)
-    print("Image Features")
-    print(imageFeatures)
+    # print("Image Features")
+    # print(imageFeatures)
     #Return Final Image Data and Features
     return imageFeatures
 
@@ -138,8 +137,8 @@ def predictImage(image):
     predicted_class = np.argmax(predictions, axis=-1)
 
     #Print Results
-    print(predictions)
-    print(predicted_class)
+    # print(predictions)
+    # print(predicted_class)
 
     if predictions[0] == 0:
         return "Normal"

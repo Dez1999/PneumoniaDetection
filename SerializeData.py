@@ -26,7 +26,7 @@ def loadAndLabelData(image_Dataset, classes):
             #Read the image 
             class_image = cv2.imread(imagepath, 0)
             try:
-                #Resize all images to be the same size (55,55)
+                #Resize all images to be the same size (100,100)
                 class_image_ = cv2.resize(class_image, (100, 100))
                 #image_resize = np.array(class_image).flatten()
                 image_final = cv2.cvtColor(class_image_, cv2.COLOR_BGR2RGB)
