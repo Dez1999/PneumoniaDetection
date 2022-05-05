@@ -4,9 +4,9 @@ This image classification project was built to detect Pneumonia in Chest X-Rays.
 
 Overall, after manipulating the model to increase the accruacy score, the accuracy of the model is 89.81 %. 
 
-# Dataset
+## Dataset
 
-The dataset that was used is taken from Kaggle at https://www.kaggle.com/paultimothymooney/chest-xray-pneumonia. 
+The dataset that was used is taken from Kaggle at https://www.kaggle.com/paultimothymooney/chest-xray-pneumonia. This contains over 5,000 different images of Normal and Pneumonia X-rays.
 
 ## Model Results
 
