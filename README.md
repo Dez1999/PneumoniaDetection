@@ -22,6 +22,7 @@ The dataset that was used is taken from Kaggle at https://www.kaggle.com/paultim
 - sklearn
 - pandas
 - streamlit
+- Pillow
 
 ## Prerequisites
 -Python 3.1 
