@@ -9,6 +9,9 @@ Overall, after manipulating the model to increase the accruacy score, the accura
 The dataset that was used is taken from Kaggle at https://www.kaggle.com/paultimothymooney/chest-xray-pneumonia. This contains over 5,000 different images of Normal and Pneumonia X-rays.
 
 ## Model Results
+![Confusion Matrix:](Results/ConfusionMatrix.png)
+![image](Results/PerformanceResults.PNG)
+![image](Results/WebPage.PNG)
 
 
 ## Tech stack / framework used
