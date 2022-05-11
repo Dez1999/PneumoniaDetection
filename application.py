@@ -43,7 +43,11 @@ def initializeGUI():
 
         # Resize Image for model
         # print("2 - Resize Image")
-        Image_resized = cv2.resize(image, (200, 200))
+        if(type(image) == type(None)):
+            pass
+        else:
+            Image_resized = cv2.resize(image, (200, 200))
+        
         displayImagesList.append(Image_resized)
 
     #Display Example Images
