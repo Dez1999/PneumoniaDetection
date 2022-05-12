@@ -51,9 +51,9 @@ def initializeGUI():
         displayImagesList.append(image)
 
     #Display Example Images
-    col1, col2 = st.columns(2)
-    col1.image(displayImagesList[0], caption=captionList[0], width=300)
-    col2.image(displayImagesList[1], caption=captionList[1], width=300)
+    # col1, col2 = st.columns(2)
+    # col1.image(displayImagesList[0], caption=captionList[0], width=300)
+    # col2.image(displayImagesList[1], caption=captionList[1], width=300)
 
     uploaded_file = st.file_uploader("Please choose an X-ray file of a chest", type=['jpg', 'png', 'jpeg'])
 
