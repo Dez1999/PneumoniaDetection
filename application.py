@@ -46,9 +46,9 @@ def initializeGUI():
         if(type(image) == type(None)):
             pass
         else:
-            Image_resized = cv2.resize(image, (200, 200))
+            image = cv2.resize(image, (200, 200))
         
-        displayImagesList.append(Image_resized)
+        displayImagesList.append(image)
 
     #Display Example Images
     col1, col2 = st.columns(2)
