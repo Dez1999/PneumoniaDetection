@@ -50,7 +50,7 @@ def initializeGUI():
         
         displayImagesList.append(image)
 
-    #Display Example Images
+    #Display Example Images - TODO add later
     # col1, col2 = st.columns(2)
     # col1.image(displayImagesList[0], caption=captionList[0], width=300)
     # col2.image(displayImagesList[1], caption=captionList[1], width=300)
@@ -72,9 +72,6 @@ def initializeGUI():
     if st.button("Predict"):
         #Preprocess Image
         final_Image  = processImage(uploaded_file)
-
-        #Image Features of uploaded Image
-        st.write(final_Image)
         
         #Predict Image
         predictedResult = predictImage(final_Image)
@@ -135,7 +132,7 @@ def getImageFeatures(imageData):
 
 def predictImage(image):
     #Load pre-trained model
-    pick_inModel = open('imageClassificationModel.sav', 'rb')
+    pick_inModel = open('ImageClassificationModel.sav', 'rb') 
     model = pickle.load(pick_inModel)
     pick_inModel.close()
 
