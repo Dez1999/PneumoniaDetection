@@ -72,6 +72,9 @@ def initializeGUI():
     if st.button("Predict"):
         #Preprocess Image
         final_Image  = processImage(uploaded_file)
+
+        #Image Features of uploaded Image
+        st.write(final_Image)
         
         #Predict Image
         predictedResult = predictImage(final_Image)
