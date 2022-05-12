@@ -1,4 +1,4 @@
-#Gui model for computer vision predictions
+#Web app model for Pneumonia Detection using Image Classification
 
 import cv2
 import streamlit as st
@@ -86,7 +86,7 @@ def processImage(image):
     Image_array = np.array(Image.open(BytesIO(bytes_data)))
     # print("1 - Image Array ")
     # print(Image_array)
-    #st.write(Image_array)
+    # st.write(Image_array)
 
     # print(type(Image_array))
     # print(Image_array.shape)
@@ -99,8 +99,6 @@ def processImage(image):
     # Convert image from BGR to RGB
     # print("3 - Convert to RGB")
     Image_RGB = cv2.cvtColor(Image_resized, cv2.COLOR_BGR2RGB)
-
-    # st.image(Image_RGB)
 
     #Compute image Features
     image_features = getImageFeatures(Image_RGB)
@@ -125,6 +123,7 @@ def getImageFeatures(imageData):
     imageFeatures = getBOWFeatures(BOW_dictionary, clusterSize, data)
     # print("Image Features")
     # print(imageFeatures)
+    
     #Return Final Image Data and Features
     return imageFeatures
 

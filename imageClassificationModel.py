@@ -32,7 +32,6 @@ print("Saved Data")
 #Serialize Image Objects
 serializeObjects('data_images', saved_data)
 
-
 # Load Pickled Image Data
 pick_in = open('data_images.pickle', 'rb')
 data = pickle.load(pick_in)
@@ -54,7 +53,6 @@ print("Computed All Descriptors")
 #Identify number of clusters to use based off of trial and error in order to figure out the best value
 #to use for the number of clusters
 
-
 cluster_size = 60
 visual_Bag_of_Words = computeBagOfWords(cluster_size,main_descriptors)
 print("Computed Bag of Words")
@@ -66,7 +64,6 @@ features = getBOWFeatures(visual_Bag_of_Words, cluster_size, sift_descriptors)
 print("Computed BOW features")
 
 
-
 #Iterate through data and obtain labels
 labels = []
 
@@ -75,8 +72,8 @@ for feature, label in saved_data:
     labels.append(label)
 
 
-# #Create training and testing data for image classification. Training and Testing datasets were created below
-# # and then used to train the model using Support Vector Machines.
+# Create training and testing data for image classification. Training and Testing datasets were created below
+# and then used to train the model using Support Vector Machines.
 x_train, x_test, y_train, y_test = train_test_split(features, labels, test_size = 0.20)
 # print("Split Dataset into training and testing sets")
 
